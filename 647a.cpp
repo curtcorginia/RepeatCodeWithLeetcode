@@ -4,7 +4,6 @@ class Solution {
 public: 
     
     int countFromCenter(std::string& inputStr, int startInd, int endInd)
-        
     {
         int addNum = 0;
         if(inputStr.size() == 0)
@@ -17,7 +16,6 @@ public:
             addNum++;
             startInd--;
             endInd++;
-            
         }
         return addNum;
     }
@@ -29,12 +27,9 @@ public:
         }
         for(int i = 0; i < s.size() - 1; i++)
         {
-            
             finalCount += countFromCenter(s, i, i);
             finalCount += countFromCenter(s, i, i + 1);
         }
-        
         return finalCount;
-        
     }
 };
